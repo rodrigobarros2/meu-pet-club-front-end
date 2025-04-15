@@ -15,7 +15,6 @@ try {
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
-    devIndicators: false,
   },
   typescript: {
     ignoreBuildErrors: true,
