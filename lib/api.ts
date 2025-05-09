@@ -31,7 +31,7 @@ export type User = {
 export function useApi() {
   const { token } = useAuth();
 
-  const baseUrl = "http://184.73.58.148:3333/api";
+  const baseUrl = "http://3.86.255.128:3333/api";
 
   const headers = {
     "Content-Type": "application/json",

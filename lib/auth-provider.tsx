@@ -43,7 +43,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const login = async (email: string, password: string) => {
     try {
-      const response = await fetch("http://184.73.58.148:3333/api/auth/login", {
+      const response = await fetch("http://3.86.255.128:3333/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -59,7 +59,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setToken(data.access_token);
       setUser(data.user);
 
-      // Store in localStorage
       localStorage.setItem("token", data.access_token);
       localStorage.setItem("user", JSON.stringify(data.user));
 
@@ -73,7 +72,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const logout = async () => {
     try {
       if (token) {
-        await fetch("http://184.73.58.148:3333/api/auth/logout", {
+        await fetch("http://3.86.255.128:3333/api/auth/logout", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,
